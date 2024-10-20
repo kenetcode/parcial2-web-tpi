@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: DM Sans, sans-serif;
+  line-height: 1;
+}
+
+header {
+  background-color: #f2f5ff;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1c7ce2;
+}
+
+body {
+  font-family: DM Sans, sans-serif;
+  line-height: 1;
+}
+
+header {
+  background-color: #f2f5ff;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1c7ce2;
+}
+
+nav {
+  display: flex; /* Muestra el menú horizontalmente */
+}
+
+nav a {
+  margin: 1rem;
+  text-decoration: none;
+  color: #1c7ce2;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* Oculta el menú en pantallas pequeñas */
+    flex-direction: column; /* Cambia a dirección vertical */
+    position: absolute; /* Permite desplazar el menú */
+    background-color: #f2f5ff; /* Fondo para el menú */
+    width: 100%; /* Ancho completo */
+    top: 60px; /* Espacio desde la parte superior */
+    left: 0; /* Alineación a la izquierda */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  }
+
+  .menu-icon {
+    display: none; /* Oculta el icono por defecto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 24px; /* Tamaño del icono */
+  }
+
+  /* Muestra el icono solo en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block; /* Muestra el icono en pantallas pequeñas */
+    }
+  }
+
+  /* Cuando se activa el menú, muestra las opciones */
+  nav.active {
+    display: flex; /* Muestra el menú */
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #f0f0f5;
+  padding: 1.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #1c7ce2;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url("src/img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30vh; /* Para cubrir toda la ventana verticalmente */
+  display: flex;
+  flex-direction: column; /* Los elementos ahora se alinearán verticalmente */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparente */
+  z-index: 1; /* Para asegurarse de que el overlay esté por encima de la imagen pero debajo del contenido */
+}
+
+.hero h1,
+.hero p {
+  padding-top: 10px;
+  position: relative;
+  z-index: 2; /* Para que el texto esté por encima del overlay */
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+/* Section ¿Por qué reservar con Pulgarcito Tours? */
+.contenido {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contenido h2 {
+  margin-bottom: 20px;
+}
+
+.contenido h3 {
+  color: #1c7ce2;
+  margin-bottom: 5px;
+}
+
+.contenido p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.contenido-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+/* Section ¿Por qué reservar con Pulgarcito Tours? */
+.contenido2 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contenido2 h2 {
+  margin-bottom: 20px;
+}
+
+.contenido2 h3 {
+  color: #1c7ce2;
+  margin-bottom: 5px;
+}
+
+.contenido2 p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.contenido2-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.tour2-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.promo-item {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-icon {
+  width: 80px; /* Cambia el tamaño del ícono */
+  height: 80px; /* Cambia el tamaño del ícono */
+}
+
+.custom-icon-2 {
+  padding-right: 2%;
+  width: 200px; /* Cambia el tamaño del ícono */
+  height: 60%; /* Cambia el tamaño del ícono */
+}
+
+/* Section "Las mejores atracciones cerca de San Salvador" */
+.tour-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.tour-section h2 {
+  margin-bottom: 20px;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Cambia para asegurarte de que siempre se muestren 3 elementos */
+  gap: 10px;
+}
+
+.excursiones-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Cambia para asegurarte de que siempre se muestren 3 elementos */
+  gap: 10px;
+}
+
+.tour-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.tour-image {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tour-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-info h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.tour-info p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.attraction-section {
+  background-color: #f9f9f9;
+
+  padding: 20px;
+  text-align: center;
+}
+
+.attraction-section h2 {
+  margin-bottom: 20px;
+}
+
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por defecto */
+  gap: 20px;
+}
+
+.attraction-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.attraction-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.attraction-info h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.attraction-info p {
+  color: #888;
+}
+
+/* Diseño responsivo */
+@media (max-width: 1200px) {
+  .attraction-grid,
+  .tour-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Tres columnas para pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .attraction-grid,
+  .tour-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .attraction-grid,
+  .tour-grid {
+    grid-template-columns: 1fr; /* Una columna para pantallas pequeñas (móviles) */
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-button {
+  font-family: DM Sans, sans-serif;
+  background-color: #1c7ce2; /* Color de fondo azul */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  margin-top: 15px; /* Margen superior */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}

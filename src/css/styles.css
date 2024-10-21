@@ -87,7 +87,7 @@ footer {
 /* Hero Section */
 .hero {
   position: relative;
-  background-image: url("src/img/banner.jpg");
+  background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
   height: 30vh; /* Para cubrir toda la ventana verticalmente */

@@ -24,48 +24,56 @@
     align-items: center;
     color: #1c7ce2;
   }
-  
+  /* Estilos para el icono del menú */
+.menu-icon {
+  display: none;
+}
+
+/* Estilos de navegación */
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1c7ce2;
+  padding: 8px 12px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e0f0ff;
+  color: #0056b3;
+}
+
+nav a.active {
+  font-weight: bold;
+  background-color: #cce5ff;
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
   nav {
-    display: flex; /* Muestra el menú horizontalmente */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f2f5ff;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
   }
-  
-  nav a {
-    margin: 1rem;
-    text-decoration: none;
-    color: #1c7ce2;
+
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
   }
-  
-  /* Estilos para pantallas pequeñas */
-  @media (max-width: 768px) {
-    nav {
-      display: none; /* Oculta el menú en pantallas pequeñas */
-      flex-direction: column; /* Cambia a dirección vertical */
-      position: absolute; /* Permite desplazar el menú */
-      background-color: #f2f5ff; /* Fondo para el menú */
-      width: 100%; /* Ancho completo */
-      top: 60px; /* Espacio desde la parte superior */
-      left: 0; /* Alineación a la izquierda */
-      z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
-    }
-  
-    .menu-icon {
-      display: none; /* Oculta el icono por defecto */
-      cursor: pointer; /* Cambia el cursor al pasar por encima */
-      font-size: 24px; /* Tamaño del icono */
-    }
-  
-    /* Muestra el icono solo en pantallas pequeñas */
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block; /* Muestra el icono en pantallas pequeñas */
-      }
-    }
-  
-    /* Cuando se activa el menú, muestra las opciones */
-    nav.active {
-      display: flex; /* Muestra el menú */
-    }
+
+  nav.active {
+    display: flex;
   }
+}
   
   footer {
     text-align: center;

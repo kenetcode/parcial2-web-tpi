@@ -46,3 +46,21 @@ document.getElementById("menu-icon").addEventListener("click", function () {
   const navbar = document.getElementById("navbar");
   navbar.classList.toggle("active"); // Activa o desactiva la clase 'active'
 });
+
+document.getElementById('mostrarReseñas').addEventListener('click', function() {
+  // Selecciona todas las reseñas ocultas
+  const reseñasOcultas = document.querySelectorAll('#reseñas .hidden');
+  reseñasOcultas.forEach(function(reseña) {
+      reseña.classList.remove('hidden'); // Muestra las reseñas
+  });
+  this.style.display = 'none'; // Oculta el botón después de mostrar más reseñas
+});
+
+document.getElementById('mostrarPreguntas').addEventListener('click', function() {
+  // Selecciona todas las preguntas ocultas
+  const preguntasOcultas = document.querySelectorAll('#preguntas .hidden');
+  preguntasOcultas.forEach(function(pregunta) {
+      pregunta.classList.remove('hidden'); // Muestra las preguntas
+  });
+  this.style.display = 'none'; // Oculta el botón después de mostrar más preguntas
+});

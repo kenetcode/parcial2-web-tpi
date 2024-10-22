@@ -9,14 +9,7 @@
     line-height: 1;
   }
   
-  header {
-    background-color: #f2f5ff;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #1c7ce2;
-  }
+  
   
   body {
     font-family: DM Sans, sans-serif;

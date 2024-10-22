@@ -5,7 +5,6 @@
 }
 
 header {
-  background-color: #f2f5ff;
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -19,54 +18,76 @@ body {
   background-color: #f4f4f4;
 }
 
-header {
-  background-color: #f2f5ff;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #1c7ce2;
+button {
+  font-family: DM Sans, sans-serif;
+  background-color: #1c7ce2; /* Color de fondo azul */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  margin-top: 15px; /* Margen superior */
 }
 
+button:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  font-family: DM Sans, sans-serif;
+  font-size: 2rem;
+}
+
+/* Estilos para el icono del menú */
+.menu-icon {
+  display: none;
+}
+
+/* Estilos de navegación */
 nav {
-  display: flex; /* Muestra el menú horizontalmente */
+  display: flex;
 }
 
 nav a {
-  margin: 1rem;
   text-decoration: none;
   color: #1c7ce2;
+  padding: 8px 12px;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-/* Estilos para pantallas pequeñas */
+nav a:hover {
+  background-color: #e0f0ff;
+  color: #0056b3;
+}
+
+nav a.active {
+  font-weight: bold;
+  background-color: #cce5ff;
+  color: #0056b3;
+}
+
 @media (max-width: 768px) {
   nav {
-    display: none; /* Oculta el menú en pantallas pequeñas */
-    flex-direction: column; /* Cambia a dirección vertical */
-    position: absolute; /* Permite desplazar el menú */
-    background-color: #f2f5ff; /* Fondo para el menú */
-    width: 100%; /* Ancho completo */
-    top: 60px; /* Espacio desde la parte superior */
-    left: 0; /* Alineación a la izquierda */
-    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f2f5ff;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
   }
 
   .menu-icon {
-    display: none; /* Oculta el icono por defecto */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    font-size: 24px; /* Tamaño del icono */
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
   }
 
-  /* Muestra el icono solo en pantallas pequeñas */
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block; /* Muestra el icono en pantallas pequeñas */
-    }
-  }
-
-  /* Cuando se activa el menú, muestra las opciones */
   nav.active {
-    display: flex; /* Muestra el menú */
+    display: flex;
   }
 }
 
@@ -86,7 +107,7 @@ footer {
   background-image: url("/src/img/banner.jpg");
   background-size: cover;
   background-position: center;
-  height: 30vh; /* Para cubrir toda la ventana verticalmente */
+  height: 32vh; /* Para cubrir toda la ventana verticalmente */
   display: flex;
   flex-direction: column; /* Los elementos ahora se alinearán verticalmente */
   align-items: center;
@@ -113,10 +134,6 @@ footer {
   padding-top: 10px;
   position: relative;
   z-index: 2; /* Para que el texto esté por encima del overlay */
-}
-
-.hero h1 {
-  font-size: 2rem;
 }
 
 /* Section ¿Por qué reservar con Pulgarcito Tours? */
@@ -151,10 +168,6 @@ h2 {
   padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
-}
-
-.contenido2 h2 {
-  margin-bottom: 20px;
 }
 
 .contenido2 h3 {
@@ -207,10 +220,6 @@ h2 {
   padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
-}
-
-.tour-section h2 {
-  margin-bottom: 20px;
 }
 
 .tour-grid {
@@ -266,7 +275,6 @@ h2 {
 
 .attraction-section {
   background-color: #f9f9f9;
-
   padding: 20px;
   text-align: center;
 }
@@ -329,33 +337,12 @@ h2 {
   }
 }
 
-.hidden {
-  display: none;
-}
-
-.toggle-button {
-  font-family: DM Sans, sans-serif;
-  background-color: #1c7ce2; /* Color de fondo azul */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  padding: 10px 15px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
-  margin-top: 15px; /* Margen superior */
-}
-
-.toggle-button:hover {
-  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
-}
-
 .container {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  
 }
 
 .column {
@@ -363,11 +350,9 @@ h2 {
   padding: 20px;
 }
 
-h2 {
-  text-align: center;
-}
-
 .review,
+.review.hidden,
+.review.question,
 .question {
   margin-bottom: 10px;
   padding: 15px;
@@ -377,7 +362,21 @@ h2 {
   transition: box-shadow 0.3s;
 }
 
+/* Hidden elements */
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
+
 .review:hover,
+.review.hidden,
+.review.question,
 .question:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -397,88 +396,9 @@ h2 {
   margin: 10px 0 0;
 }
 
-/* Hidden elements */
-.hidden {
-  display: none;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .column {
     flex: 1 1 100%;
   }
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.review,
-.question {
-  margin-bottom: 10px;
-  padding: 15px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: box-shadow 0.3s;
-}
-
-.review:hover,
-.question:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.review-author {
-  font-weight: bold;
-  margin: 0;
-}
-
-.review-title {
-  font-style: italic;
-  color: #555;
-  margin: 5px 0;
-}
-
-.review-content {
-  margin: 10px 0 0;
-}
-
-/* Hidden elements */
-.hidden {
-  display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .column {
-    flex: 1 1 100%;
-  }
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
 }

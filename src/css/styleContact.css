@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff;
+}
+
+header {
+    background-color: #f2f5ff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1c7ce2;
+  }
+
+.info-section {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #0a3871;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+}
+
+.contact-info img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.address-image img {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+footer {
+    
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
